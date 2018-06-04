@@ -5,6 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-Helloo：<span th:text="${Name}"></span>
+Helloo：<span th:text = "${#strings.isEmpty(Name)}?'1':'2'"></span>
 </body>
 </html>
