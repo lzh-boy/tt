@@ -2,9 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
+    <link th:href="@{css/demo.css}" rel="stylesheet"/>
     <title>Title</title>
 </head>
-<body>
+<body class="font-size">
 Helloo：<span th:text = "${#strings.isEmpty(Name)}?'1':'2'"></span>
 </body>
 </html>
