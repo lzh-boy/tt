@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bt.tt.mapper.TestMapper">
+    
+    <select id="getUsers" resultType="com.bt.tt.dao.User">
+    	SELECT		*
+    	FROM		USER    
+	</select>
+    
+    <select id="getUser" parameterType="string" resultType="com.bt.tt.dao.User">
+        SELECT		*
+        FROM		USER
+        WHERE		ID=#{0}
+    </select>
+    
+    <insert id="insertUser" parameterType="com.bt.tt.dao.User">
+    	INSERT INTO USER
+    	(
+    		 ID
+    		,NAME
+    	)
+    	VALUES
+    	(
+    		 #{id}
+    		,#{name}
+    	) 
+    </insert>
+    
+	<delete id="deleteUser" parameterType="string">
+		DELETE
+		FROM	USER
+		WHERE	ID=#{0}	    
+	</delete>
+</mapper>
